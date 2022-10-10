@@ -1,4 +1,5 @@
-li {
-  float: left;
-  border-right: 1px solid #bbb;
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
 }
