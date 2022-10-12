@@ -3,19 +3,17 @@
   box-sizing: border-box;
 }
 
-/* adding changes for the body element */
-/* adds background image */
-
-/* body { 
-  background-image: url("./assets/GradientBG.png"); 
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-size: cover;
-} */
+header {
+  width: 100%;
+  padding: 60px;
+  background: black;
+  opacity: 50%;
+  background-image: url("./assets/GradientBG.png");
+}
 
 :root {
   --g1: rgb(98, 0, 234);
-  --g2: rgb(236, 64, 122);
+  --g2: rgb(27, 221, 205);
 }
 
 @keyframes background-pan {
@@ -28,9 +26,10 @@
 }
 
 body {
-  animation: background-pan 10s linear infinite alternate;
+  animation: background-pan 2s linear infinite alternate;
   background: linear-gradient(to right, var(--g1), var(--g2), var(--g1));
   background-size: 200%;
+  margin: 0;
 }
 
 ul {
