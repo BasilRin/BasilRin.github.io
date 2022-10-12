@@ -19,17 +19,16 @@
 }
 
 @keyframes background-pan {
-  from {
+  0% {
     background-position: 0% center;
   }
-
-  to {
+  100% {
     background-position: 100% center;
   }
 }
 
 body {
-  animation: background-pan 10s linear infinite;
+  animation: background-pan 10s linear infinite alternate;
   background: linear-gradient(to right, var(--g1), var(--g2), var(--g1));
   background-size: 200%;
 }
