@@ -1,11 +1,41 @@
-body {
-  background-image: url("./assets/GradientBG.png");
+* {
+  /* changes everything to this default */
+  box-sizing: border-box;
+}
+
+/* adding changes for the body element */
+/* adds background image */
+
+/* body { 
+  background-image: url("./assets/GradientBG.png"); 
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: cover;
+} */
+
+:root {
+  --g1: rgb(98, 0, 234);
+  --g2: rgb(236, 64, 122);
+}
+
+@keyframes background-pan {
+  from {
+    background-position: 0% center;
+  }
+
+  to {
+    background-position: 100% center;
+  }
+}
+
+body {
+  animation: background-pan 10s linear infinite;
+  background: linear-gradient(to right, var(--g1), var(--g2), var(--g1));
+  background-size: 200%;
 }
 
 ul {
+  /* adding changes for the un ordered list element */
   list-style-type: none;
   margin: 0;
   padding: 0;
@@ -14,11 +44,13 @@ ul {
 }
 
 li {
+  /* adding changes for the list items*/
   float: left;
   border-right: 5px solid #bbb; /* adds white line beside button */
 }
 
 li a {
+  /* adding changes for the list items that have an anchor tag in it <a> */
   display: block;
   color: white;
   text-align: center;
@@ -60,20 +92,6 @@ ul {
   position: absolute;
   top: -650px;
   left: -1200px;
-}
-
-* {
-  box-sizing: border-box;
-}
-
-body {
-  margin: 0;
-  font-family: Arial, Helvetica, sans-serif;
-}
-
-.header {
-  text-align: center;
-  padding: 32px;
 }
 
 .row {
