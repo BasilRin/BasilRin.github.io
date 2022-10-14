@@ -9,15 +9,29 @@ header {
   opacity: 50%;
 }
 
+@font-face {
+  font-family: HandWriting;
+  src: url(/assets/Fonts/Satisfy-Regular.ttf);
+}
 
 #canvas {
 width: 100%; 
 }
 
 
+.titleContainer {
+  position: relative;
+}
+
+
+
 .title {
-  margin: auto;
-  width: 40%;
+  font-family: HandWriting;
+  position: absolute;
+  text-align: center;
+  top: -50%;
+  width: 100%;
+  font-size: 70px;
 }
 
 
