@@ -1,3 +1,4 @@
+
 // Get the elements with class="column"
 let elements = document.getElementsByClassName("column");
 const sizeArray = [
@@ -24,13 +25,32 @@ let fourImages = () => {
 
 fourImages();
 
-const canvas = document.getElementById("canvas");
-const ctx = canvas.getContext("2d");
+function drawPattern(img, size) {
+  var canvas = document.getElementById('canvas');
+  
+  canvas.height = 200;
+  canvas.width =  1900;
+  
+  var tempCanvas = document.createElement("canvas"),
+      tCtx = tempCanvas.getContext("2d");
 
-const img = new Image();
-img.src = "canvas_createpattern.png";
-img.onload = () => {
-  const pattern = ctx.createPattern(img, "repeat");
-  ctx.fillStyle = pattern;
-  ctx.fillRect(0, 0, 300, 300);
-};
+  tempCanvas.width = size;
+  tempCanvas.height = size;
+  tCtx.drawImage(img, 0, 0, img.width, img.height, 0, 0, size, size);
+
+  // use getContext to use the canvas for drawing
+  var ctx = canvas.getContext('2d');
+  ctx.clearRect(0, 0, canvas.width, canvas.height);
+  ctx.fillStyle = ctx.createPattern(tempCanvas, 'repeat');
+  
+  ctx.beginPath();
+  ctx.rect(0,0,canvas.width,canvas.height);
+  ctx.fill();
+
+}
+
+var img = new Image();
+img.src = "/assets/PatternImage.png";
+img.onload = function(){
+ drawPattern(this, 50);
+}

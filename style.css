@@ -5,11 +5,22 @@
 
 header {
   width: 100%;
-  padding: 60px;
-  background: black;
+  background: whitesmoke;
   opacity: 50%;
-  background-image: url("./assets/GradientBG.png");
 }
+
+
+#canvas {
+width: 100%; 
+}
+
+
+.title {
+  margin: auto;
+  width: 40%;
+}
+
+
 
 :root {
   --g1: rgb(98, 0, 234);
