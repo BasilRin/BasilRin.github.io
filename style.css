@@ -112,6 +112,8 @@ ul {
   left: -1200px;
 }
 
+/*//////////////////////////////////////////////////////////////////Image Galary (rows and columns)///////////////////////////////////////////////////////*/
+
 .row {
   display: -ms-flexbox; /* IE 10 */
   display: flex;
@@ -121,13 +123,33 @@ ul {
 }
 
 /* Create two equal columns that sits next to each other */
-.column {
+.even {
   -ms-flex: 50%; /* IE 10 */
   flex: 50%;
   padding: 0 4px;
 }
 
-.column img {
+.odd {
+  -ms-flex: 50%; /* IE 10 */
+  flex: 50%;
+  padding: 0 4px;
+}
+
+.even img {
   margin-top: 8px;
   vertical-align: middle;
 }
+
+.odd img {
+  margin-top: 8px;
+  vertical-align: middle;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/*//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////*/
