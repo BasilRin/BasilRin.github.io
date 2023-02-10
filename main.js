@@ -23,12 +23,14 @@ let fourImages = () => {
 
 fourImages();
 
+/** 
+
 // Get the elements with class="column"
 let even = document.getElementsByClassName("Even");
 let odd = document.getElementsByClassName("Odd");
 const size = ["20%", "10%"];
 
-console.log(even[0]);
+
 
 let fourRows = () => {
   for (let i = 0; i < 28; i++) {
@@ -44,6 +46,8 @@ let fourRows = () => {
 };
 
 fourRows();
+
+/** */
 
 function drawPattern(img, size) {
   var canvas = document.getElementById("canvas");
