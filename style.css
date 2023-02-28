@@ -115,41 +115,20 @@ ul {
 /*//////////////////////////////////////////////////////////////////Image Galary (rows and columns)///////////////////////////////////////////////////////*/
 
 .row {
-  display: -ms-flexbox; /* IE 10 */
   display: flex;
-  -ms-flex-wrap: wrap; /* IE 10 */
   flex-wrap: wrap;
   padding: 0 4px;
 }
 
 /* Create two equal columns that sits next to each other */
-.even {
-  -ms-flex: 50%; /* IE 10 */
+.column {
   flex: 50%;
   padding: 0 4px;
 }
 
-.odd {
-  -ms-flex: 50%; /* IE 10 */
-  flex: 50%;
-  padding: 0 4px;
-}
-
-.even img {
+.column img {
   margin-top: 8px;
   vertical-align: middle;
-}
-
-.odd img {
-  margin-top: 8px;
-  vertical-align: middle;
-}
-
-/* Clear floats after the columns */
-.row:after {
-  content: "";
-  display: table;
-  clear: both;
 }
 
 /*//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////*/

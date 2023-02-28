@@ -1,5 +1,3 @@
-// Get the elements with class="column"
-let elements = document.getElementsByClassName("column");
 const sizeArray = [
   "25%",
   "20%",
@@ -13,41 +11,17 @@ const sizeArray = [
   "5%",
 ];
 
-let fourImages = () => {
+var elements = document.getElementsByClassName("column");
+
+function four() {
   for (let i = 0; i < elements.length; i++) {
     let randomNumber = Math.floor(Math.random() * 10);
-    elements[i].style.msFlex = sizeArray[randomNumber];
+    console.log(i);
     elements[i].style.flex = sizeArray[randomNumber];
   }
-};
+}
 
-fourImages();
-
-/** 
-
-// Get the elements with class="column"
-let even = document.getElementsByClassName("Even");
-let odd = document.getElementsByClassName("Odd");
-const size = ["20%", "10%"];
-
-
-
-let fourRows = () => {
-  for (let i = 0; i < 28; i++) {
-    if (i % 2 == 0) {
-      even[i].style.msFlex = sizeArray[0];
-      even[i].style.flex = sizeArray[0];
-    } else if (i % 2 != 0) {
-      odd[i].style.msFlex = sizeArray[1];
-      odd[i].style.flex = sizeArray[1];
-    }
-    console.log(i);
-  }
-};
-
-fourRows();
-
-/** */
+four();
 
 function drawPattern(img, size) {
   var canvas = document.getElementById("canvas");
