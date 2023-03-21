@@ -1,27 +1,31 @@
-const sizeArray = [
-  "25%",
-  "20%",
-  "15%",
-  "10%",
-  "5%",
-  "25%",
-  "20%",
-  "15%",
-  "10%",
-  "5%",
-];
+//////////////////////////////////////////////////////////////////////// gallery code /////////////////////////////////////////////////////////////////////////
+
+/**
+
+const sizeArray = ["25%", "20%"];
 
 var elements = document.getElementsByClassName("column");
 
 function four() {
   for (let i = 0; i < elements.length; i++) {
-    let randomNumber = Math.floor(Math.random() * 10);
-    console.log(i);
+    let randomNumber = Math.floor(Math.random() * 2);
+    console.log(randomNumber);
     elements[i].style.flex = sizeArray[randomNumber];
   }
 }
 
 four();
+
+
+
+let picture1 = document.getElementById("pic1");
+let picture2 = document.getElementById("pic2");
+
+picture1.style.flex = "50%";
+
+**/
+
+//////////////////////////////////////////////////////////////////////// Pattern code /////////////////////////////////////////////////////////////////////////
 
 function drawPattern(img, size) {
   var canvas = document.getElementById("canvas");
