@@ -7,7 +7,7 @@
 
 header {
   width: 100%;
-  background: whitesmoke;
+  background: #eaeaea;
   opacity: 50%;
 }
 
@@ -36,8 +36,8 @@ header {
 /*////////////////////////////////////////////////////////////////// BG Color/ Animation ////////////////////////////////////////////////////////////////////////////*/
 
 :root {
-  --g1: rgb(19, 18, 20);
-  --g2: rgb(104, 103, 104);
+  --g1: #00abb3;
+  --g2: #b2b2b2;
 }
 
 @keyframes background-pan {
@@ -61,7 +61,8 @@ body {
 nav.top-Nav {
   background-image: linear-gradient(to right, rgb(117, 117, 117), rgb(0, 0, 0));
   height: 200px;
-  border: 5px solid #ffffff;
+  border-top: 5px solid #ddd;
+  border-bottom: 5px solid #ddd;
   position: relative;
   width: 100%;
   overflow: hidden;
@@ -89,7 +90,7 @@ li a {
 
 li a:hover:not(.active) {
   /* when hovering over it will highlight the button */
-  background-color: #111;
+  background-color: #00abb3;
 }
 
 li:nth-child(3) {
@@ -160,7 +161,7 @@ ul.icons {
 }
 
 .link:hover:not(.active) {
-  background-color: #ffffff;
+  background-color: #00abb3;
 }
 
 .link {
