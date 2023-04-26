@@ -9,7 +9,7 @@
 
 header {
   width: 100%;
-  background: #ffffff;
+  background: #eaeaea;
   opacity: 50%;
 }
 
@@ -32,7 +32,7 @@ header {
   text-align: center;
   top: 0%;
   width: 100%;
-  font-size: 3.5vw;
+  font-size: 70px;
 }
 
 /*////////////////////////////////////////////////////////////////// BG Color/ Animation ////////////////////////////////////////////////////////////////////////////*/
@@ -67,35 +67,41 @@ nav.top-Nav {
   border-bottom: 5px solid #ddd;
   position: relative;
   width: 100%;
+  list-style-type: none;
 }
 
-ul.nav-image-list {
+ul {
   /* adding changes for the un ordered list element */
-  background-color: transparent;
-  text-align: center;
-  padding-top: 8px;
+  list-style-type: none;
 }
 
-.image-link {
+li {
+  /* adding changes for the list items*/
+  float: left;
+}
+
+li a {
   /* adding changes for the list items that have an anchor tag in it <a> */
+  display: block;
   color: white;
+  text-align: center;
+  padding: 14px 16px;
   text-decoration: none;
-  display: inline-flex;
-  background-color: #8d8d8d;
-  border-radius: 150px;
-  width: 23vw;
-  height: 9vw;
-  margin: 2px;
 }
 
-.image-link:hover:not(.active) {
+li a:hover:not(.active) {
   /* when hovering over it will highlight the button */
   background-color: #00abb3;
 }
 
-.nav-text {
-  position: absolute;
-  top: 40%;
+li:nth-child(3) {
+  /* changes the color of the about button */
+  float: right;
+}
+
+li:nth-child(2) {
+  /* changes the color of the contact button */
+  float: right;
 }
 
 /*////////////////////////////////////////////////////////////////// Image Galary (rows and columns) ///////////////////////////////////////////////////////*/
@@ -106,35 +112,11 @@ ul.nav-image-list {
   background-color: transparent;
 }
 
-.image-container1 {
+.image-container {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  padding-top: 10px;
-  gap: 10px;
-}
-
-.image-container2 {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  padding-top: 10px;
-  gap: 10px;
-}
-
-.image-container3 {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  padding-top: 10px;
-  gap: 10px;
-}
-
-.image-container4 {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  padding-top: 10px;
+  padding: 10px;
   gap: 10px;
 }
 
@@ -162,18 +144,22 @@ ul.nav-image-list {
 /*//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////*/
 
 nav.bottom-Nav {
-  background-image: linear-gradient(to right, rgb(117, 117, 117), rgb(0, 0, 0));
+  background-color: rgb(0, 0, 0);
   border-top: 5px solid rgb(255, 255, 255);
-  height: 370px;
+  height: 250px;
   position: relative;
   bottom: -100px;
   width: 100%;
 }
 
 ul.icons {
-  text-align: center;
+  display: flex;
   background-color: transparent;
-  padding-top: 20px;
+  gap: 10vmin;
+  position: absolute;
+  left: 10%;
+  right: 1%;
+  bottom: 0px;
 }
 
 .link:hover:not(.active) {
@@ -181,10 +167,9 @@ ul.icons {
 }
 
 .link {
-  display: inline-flex;
+  display: inline block;
   background-color: #8d8d8d;
   border-radius: 150px;
-  width: 16vw;
-  height: 16vw;
-  margin: 15px;
+  width: 300px;
+  height: 300px;
 }
